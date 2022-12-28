@@ -3,7 +3,7 @@ Get Admin Users who are Disabled AND don't
 have an email address assigned in
 extensionAttribute10
 #>
-$adusers = Get-ADUser -Filter {Enabled -eq "True" -AND extensionAttribute10 -notlike "*"} -SearchBase "OU=administrator,DC=docusignhq,DC=com"
+$adusers = Get-ADUser -Filter {Enabled -eq "True" -AND extensionAttribute10 -notlike "*"} -SearchBase "OU=administrator,DC=yourcompany,DC=com"
 
 <#
 For each user who doesn't have an email
