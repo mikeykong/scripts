@@ -22,8 +22,8 @@ try
   foreach ($aduser in $adusers)
   {
     $aduser_name_split = @($aduser.Name.Split())
-    $email_constructed = ($aduser_name_split[-2]) + '.' + ($aduser_name_split[-1]) + '@docusign.com'
-    Write-Output "$aduser_name_split will have the email address: $email_constructed"
+    $email_construct = ($aduser_name_split[-2]) + '.' + ($aduser_name_split[-1]) + '@yourcompany.com'
+    Write-Output "$aduser_name_split will have the email address: $email_construct"
   }
 }
 catch
@@ -41,9 +41,9 @@ if ($confirmation -eq 'y')
   foreach ($aduser in $adusers)
   {
     $aduser_name_split = @($aduser.Name.Split())
-    $email_constructed = ($aduser_name_split[-2]) + '.' + ($aduser_name_split[-1]) + '@docusign.com'
-    Set-AdUser -Identity $aduser -Add @{"extensionAttribute10"=$email_constructed}
-    Write-Output "Adding email address $email_constructed for user $aduser_name_split"
+    $email_construct = ($aduser_name_split[-2]) + '.' + ($aduser_name_split[-1]) + '@yourcompany.com'
+    Set-AdUser -Identity $aduser -Add @{"extensionAttribute10"=$email_construct}
+    Write-Output "Adding email address $email_construct for user $aduser_name_split"
   }
 }
 else
