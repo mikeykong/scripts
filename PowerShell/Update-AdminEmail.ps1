@@ -55,5 +55,5 @@ else
 EXAMPLE
 A Firstname LastName will have the email address: FirstName.LastName@YourCompany.com
 Do you want to proceed? Y or N: y
-Adding email address FirstName.LastName@docusign.com for user A FirstName LastName
+Adding email address FirstName.LastName@YourCompany.com for user A FirstName LastName
 #>
